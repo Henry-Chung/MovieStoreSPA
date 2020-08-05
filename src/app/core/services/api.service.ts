@@ -49,8 +49,12 @@ export class ApiService {
   }
 
   // post some information
-  // Login, signup, create movie
-  create() {}
+  // login, signup, create movie
+  create(path: string, resource: any): Observable<any> {
+    return this.http
+      .post(`${environment.apiUrl}${path}`, resource)
+      .pipe(map((response) => response));
+  }
 
   // update movie info
   // update userinfo by id

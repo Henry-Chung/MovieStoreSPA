@@ -1,1 +1,39 @@
-<p>login works!</p>
+<!-- 
+    Send un/pw with Login model, to AuthService (Angular) , this will send to our AccountController
+    POST
+ -->
+<!-- 
+Template Approach
+ -->
+
+<form (ngSubmit)="login()" #loginForm>
+  <div *ngIf="invalidLogin" class="alert alert-danger">
+    Invalid username and/or password
+  </div>
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      aria-describedby="emailHelp"
+      placeholder="Enter email"
+    />
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password"
+      placeholder="Password"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+
+<!-- 
+  In angular we have two ways to create/work with forms
+  1. Template driven foms - used for simple forms where form Logic is not complex
+  2. Reactive forms - used for more complex forms, with complex validatoin rules etc register, create
+-->

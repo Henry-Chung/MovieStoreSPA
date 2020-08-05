@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 // 3rd party libraries
 import {
   NgbCarouselModule,
@@ -23,6 +25,11 @@ import { MovieDetailsComponent } from './movies/movie-details/movie-details.comp
 import { MovieCardComponent } from './shared/components/movie-card/movie-card.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MovieListComponent } from './movies/movie-list/movie-list.component';
+import { FavoritesComponent } from './account/Favorites/favorites/favorites.component';
+import { PurchasesComponent } from './account/purchases/purchases/purchases.component';
+import { ProfileComponent } from './account/profile/profile/profile.component';
+import { LoginpartialComponent } from './core/loginpartial/loginpartial/loginpartial.component';
+import { OverviewPipeComponent } from './shared/pipes/overview-pipe/overview-pipe.component';
 
 @NgModule({
   // Components, if you wanna use a Component in Angular they should be declared inside atleast one module
@@ -36,11 +43,18 @@ import { MovieListComponent } from './movies/movie-list/movie-list.component';
     MovieDetailsComponent,
     MovieCardComponent,
     MovieListComponent,
+    FavoritesComponent,
+    PurchasesComponent,
+    ProfileComponent,
+    LoginpartialComponent,
+    OverviewPipeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgbModule,
     NgbCarouselModule,
     NgbCollapseModule,
